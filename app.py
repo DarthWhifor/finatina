@@ -20,7 +20,7 @@ if not st.session_state.authenticated:
             st.success("✅ Uspješno ste prijavljeni! Nastavljamo...")
         else:
             st.error("❌ Pogrešna lozinka")
-    st.stop()  # prekini app dok se ne unese prava lozinka
+    #st.stop()  # prekini app dok se ne unese prava lozinka
 
 # ==============================
 #  Glavni app nakon autentifikacije
