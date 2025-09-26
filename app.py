@@ -3,6 +3,29 @@ from PIL import Image
 import os, json, requests, locale
 from search_font import find_most_similar_font
 
+# ==============================
+#  Jednostavna autentifikacija
+# ==============================
+PASSWORD = "finatinalozinka"
+
+if "authenticated" not in st.session_state:
+    st.session_state.authenticated = False
+
+if not st.session_state.authenticated:
+    st.title("🔒 Prijava")
+    password = st.text_input("Unesi lozinku:", type="password")
+    if password == PASSWORD:
+        st.session_state.authenticated = True
+        st.experimental_rerun()
+    else:
+        if password:  # ako je nešto upisano ali nije točno
+            st.error("❌ Pogrešna lozinka")
+    st.stop()  # prekini app dok se ne autentificira korisnik
+
+# ==============================
+#  Ako je lozinka OK, nastavi app
+# ==============================
+
 # Config
 FONT_FOLDER = "data/all_fonts_flat"
 FONT_DB_FILE = "data/fonts_db.json"
