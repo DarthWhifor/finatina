@@ -74,7 +74,7 @@ def gemma_response(text_prompt, language="hr"):
 # Process uploaded image
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
-    st.image(image, caption="Uploadana slika", use_column_width=True)
+    st.image(image, caption="Uploadana slika", use_container_width=True)
 
     top_fonts = find_most_similar_font(image, top_n=TOP_N)
 
