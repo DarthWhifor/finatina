@@ -6,7 +6,7 @@ from search_font import find_most_similar_font
 # ==============================
 #  Jednostavna autentifikacija
 # ==============================
-PASSWORD = "finatinalozinka"
+PASSWORD = "openAIlozinka"
 
 if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
@@ -14,16 +14,16 @@ if "authenticated" not in st.session_state:
 if not st.session_state.authenticated:
     st.title("🔒 Prijava")
     password = st.text_input("Unesi lozinku:", type="password")
-    if password == PASSWORD:
-        st.session_state.authenticated = True
-        st.experimental_rerun()
-    else:
-        if password:  # ako je nešto upisano ali nije točno
+    if password:
+        if password == PASSWORD:
+            st.session_state.authenticated = True
+            st.success("✅ Uspješno ste prijavljeni! Nastavljamo...")
+        else:
             st.error("❌ Pogrešna lozinka")
-    st.stop()  # prekini app dok se ne autentificira korisnik
+    st.stop()  # prekini app dok se ne unese prava lozinka
 
 # ==============================
-#  Ako je lozinka OK, nastavi app
+#  Glavni app nakon autentifikacije
 # ==============================
 
 # Config
