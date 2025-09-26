@@ -6,7 +6,7 @@ from search_font import find_most_similar_font
 # ==============================
 #  Jednostavna autentifikacija
 # ==============================
-PASSWORD = "openAIlozinka"
+PASSWORD = "finatinalozinka"
 
 if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
