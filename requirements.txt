@@ -1,0 +1,8 @@
+streamlit>=1.37.0
+Pillow>=10.3.0
+numpy>=1.26.0
+scikit-image>=0.23.0
+fonttools>=4.55.0
+requests>=2.32.0
+pycairo>=1.25.0
+tqdm>=4.66.0

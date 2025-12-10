@@ -89,8 +89,7 @@ if st.session_state.authenticated:
             "NOTTEXTBOXSDETECTION": 1, #0,
             "FREEFONTS": 0, #1,
             "limit": 10,
-            "urlimagebase64": img_b64,
-            "textmode": 1
+            "urlimagebase64": img_b64
         }
 
         try:
